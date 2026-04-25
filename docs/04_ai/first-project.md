@@ -72,7 +72,7 @@ apps/web/
 ├── package.json
 ├── tsconfig.json              # strict + the additions in docs/02_standards/typescript.md
 ├── next.config.mjs            # security headers from docs/01_architecture/security.md
-├── tailwind.config.ts         # extends @rlv/config preset (from packages/config)
+├── tailwind.config.ts         # extends @keystone/config preset (from packages/config)
 ├── postcss.config.mjs
 └── src/
     ├── app/

@@ -1,6 +1,8 @@
-# rlvPlatform — Full-Stack Starter
+# Keystone — Full-Stack Starter
 
 A reusable starter for full-stack web and dashboard projects. Carries the AI workflow, baseline configuration, and standards docs you want present from day one — no application code yet.
+
+> The keystone is the central wedge that locks an arch in place. This template is the piece every project built on it rests on.
 
 ## What you get
 

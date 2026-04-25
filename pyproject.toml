@@ -1,7 +1,7 @@
 [project]
-name = "rlv-platform"
+name = "keystone"
 version = "0.0.0"
-description = "Full-stack starter — Django + Next.js + Postgres."
+description = "Keystone — full-stack starter for web and dashboard projects (Django + Next.js + Postgres)."
 requires-python = ">=3.12"
 
 [tool.ruff]

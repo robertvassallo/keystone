@@ -20,7 +20,7 @@ The Tailwind config consumes design tokens; never hard-code colours / spacing in
 
 ```ts
 // tailwind.config.ts
-import preset from '@rlv/config/tailwind.preset';
+import preset from '@keystone/config/tailwind.preset';
 export default { presets: [preset], content: [...] };
 ```
 
