@@ -1,0 +1,54 @@
+# Local development services. Brings up Postgres 16 + Redis 7 with persistent
+# volumes and healthchecks. Reads credentials from `.env` at the repo root
+# (Docker Compose loads it automatically).
+#
+# Usage:
+#   docker compose -f infra/docker/compose.dev.yml up -d
+#   docker compose -f infra/docker/compose.dev.yml down
+#   docker compose -f infra/docker/compose.dev.yml logs -f postgres
+#
+# Wipe data (irreversible):
+#   docker compose -f infra/docker/compose.dev.yml down -v
+
+name: keystone-dev
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: keystone-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-keystone_dev}
+      POSTGRES_USER: ${POSTGRES_USER:-keystone}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-keystone}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-keystone} -d ${POSTGRES_DB:-keystone_dev}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    shm_size: 256mb
+
+  redis:
+    image: redis:7-alpine
+    container_name: keystone-redis
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  postgres-data:
+    name: keystone-postgres-data
+  redis-data:
+    name: keystone-redis-data

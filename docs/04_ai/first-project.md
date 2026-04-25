@@ -9,10 +9,11 @@ Read in full **once** before taking any action. Then execute the phases in order
 Before doing anything, confirm:
 
 1. The user has cloned this template into a project directory and reset its history if they want a fresh git log.
-2. The dev tools listed in `README.md` are installed (`node`, `pnpm`, `python`, `uv`, `psql`).
-3. You've read `CLAUDE.md` — task router, hard rules, workflow.
-4. You've read `docs/02_standards/project-structure.md` — the granularity principle.
-5. You've read the standards docs that match the first feature's area.
+2. The dev tools are installed per `docs/01_architecture/dev-setup.md` (`node` ≥ 22, `pnpm` ≥ 9, `python3` ≥ 3.12, `uv`, plus either local `psql` 16 **or** Docker for the Compose path).
+3. The user has run `cp .env.example .env` and filled in `DJANGO_SECRET_KEY`.
+4. You've read `CLAUDE.md` — task router, hard rules, workflow.
+5. You've read `docs/02_standards/project-structure.md` — the granularity principle.
+6. You've read the standards docs that match the first feature's area.
 
 If anything in the user's request conflicts with the hard rules in `CLAUDE.md`, **surface the conflict before proceeding**.
 

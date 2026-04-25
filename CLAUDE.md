@@ -31,7 +31,7 @@ Versions and rationale: `docs/01_architecture/stack.md`.
 | Anything auth-touching | `docs/01_architecture/auth.md` + `security.md` |
 | Anything DB-touching | `docs/02_standards/sql.md` + `docs/01_architecture/data-model.md` |
 | Tests | `docs/02_standards/testing.md` |
-| Setting up dev env | `README.md` + `docs/01_architecture/monorepo.md` |
+| Setting up dev env | `docs/01_architecture/dev-setup.md` (+ `monorepo.md` for the target layout) |
 
 ## Hard rules
 

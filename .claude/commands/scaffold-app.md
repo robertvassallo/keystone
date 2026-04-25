@@ -10,7 +10,7 @@ You are bootstrapping the application workspaces in a fresh project based on thi
 Run these checks first; fail fast if any are wrong.
 
 1. `apps/` directory does **not** yet exist (or contains no `web` / `api` subdirectory). If it does, ask the user before continuing — they may already have started.
-2. Required tools on PATH: `node` (≥ 22), `pnpm` (≥ 9), `python3` (≥ 3.12), `uv`, `psql` (≥ 16). If any are missing, list them and stop.
+2. Required tools on PATH: `node` (≥ 22), `pnpm` (≥ 9), `python3` (≥ 3.12), `uv`, plus **either** `psql` (≥ 16) locally **or** `docker` (the Compose path lives at `infra/docker/compose.dev.yml`). If anything is missing, list it and stop — point the user at `docs/01_architecture/dev-setup.md` for OS-specific install commands.
 3. `.env.example` exists at the repo root. If not, create it from the template.
 
 ## Phase A — Repo-level workspace files

@@ -41,6 +41,8 @@ code .
 
 Read `CLAUDE.md` for the AI working agreement, then open `docs/00_overview.md` for a guided tour.
 
+For the canonical install commands (Linux / macOS / WSL) and the Docker path for the dev DB, see `docs/01_architecture/dev-setup.md`.
+
 ## Layout
 
 ```
@@ -63,7 +65,6 @@ Read `CLAUDE.md` for the AI working agreement, then open `docs/00_overview.md` f
 
 - Application code (`apps/web`, `apps/api`)
 - CI workflows
-- Docker / docker-compose
 - License (choose per-project)
 
 These are deferred until the first real project lands. `docs/01_architecture/monorepo.md` describes the target shape.
@@ -77,12 +78,9 @@ These are deferred until the first real project lands. `docs/01_architecture/mon
 
 ## Tooling expected on the dev machine
 
-- Node 22 LTS (`nvm install 22 && nvm use 22`)
-- Python 3.12 (`uv python install 3.12`)
-- pnpm 9 (`corepack enable && corepack prepare pnpm@latest --activate`)
-- uv (`curl -LsSf https://astral.sh/uv/install.sh | sh`)
-- Postgres 16 (`brew install postgresql@16` or use Docker)
-- VS Code with the recommended extensions
+- Node 22 LTS · pnpm 9 · Python 3.12 · uv · Postgres 16 (or Docker) · VS Code
+
+Full install commands for Linux / macOS / WSL plus a Docker path for the dev DB live in `docs/01_architecture/dev-setup.md`.
 
 ## License
 

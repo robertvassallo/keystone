@@ -5,7 +5,7 @@
 | Layer | Choice | Version |
 |---|---|---|
 | Runtime — Node | LTS | **22.x** |
-| Runtime — Python | CPython | **3.12** |
+| Runtime — Python | CPython | **≥ 3.12** (3.13 accepted) |
 | Frontend framework | Next.js (App Router) | **15.x** |
 | UI library | React | **19.x** |
 | Styling | Tailwind CSS + SASS modules | Tailwind **3.x** / Dart Sass |
