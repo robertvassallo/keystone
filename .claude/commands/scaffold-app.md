@@ -7,11 +7,18 @@ You are bootstrapping the application workspaces in a fresh project based on thi
 
 ## Pre-flight
 
-Run these checks first; fail fast if any are wrong.
+Run these checks **first and in isolation** — do not ask any design questions until pre-flight passes. If pre-flight fails, surface only the tooling problem, point at the install doc, and stop. The user will re-run `/scaffold-app` after fixing the environment; the design questions belong to that second pass.
 
 1. `apps/` directory does **not** yet exist (or contains no `web` / `api` subdirectory). If it does, ask the user before continuing — they may already have started.
-2. Required tools on PATH: `node` (≥ 22), `pnpm` (≥ 9), `python3` (≥ 3.12), `uv`, plus **either** `psql` (≥ 16) locally **or** `docker` (the Compose path lives at `infra/docker/compose.dev.yml`). If anything is missing, list it and stop — point the user at `docs/01_architecture/dev-setup.md` for OS-specific install commands.
+2. Required tools on PATH: `node` (≥ 22), `pnpm` (≥ 9), `python3` (≥ 3.12), `uv`, plus **either** `psql` (≥ 16) locally **or** `docker` (the Compose path lives at `infra/docker/compose.dev.yml`). Run all checks; do not short-circuit on the first failure (the user benefits from the full list in one pass).
 3. `.env.example` exists at the repo root. If not, create it from the template.
+
+### When pre-flight fails
+
+- Render a single status table covering every check (✅ / ❌ / ⏭).
+- For each failed tool, **do not synthesize install commands.** Point the user at the relevant section of `docs/01_architecture/dev-setup.md` (Linux / macOS / WSL) — that doc is the canonical install reference and stays in sync with the rest of the template. Saying "run `nvm install 22`" inline risks drifting from the doc.
+- End with: *"Install the missing tools per `docs/01_architecture/dev-setup.md`, then re-run `/scaffold-app`. I'll ask the design questions on the next pass."*
+- **Do not ask the design questions in the same response.** They're for the post-pre-flight pass — see "Stop conditions" below.
 
 ## Phase A — Repo-level workspace files
 
