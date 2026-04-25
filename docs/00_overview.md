@@ -28,6 +28,13 @@ docs/
 6. **`docs/02_standards/project-structure.md`** — modular & granular file/folder principle (applies to every part of the codebase).
 7. The standards docs that match the area you'll touch.
 
+## A new project's path (Claude on day 1)
+
+1. **`docs/04_ai/first-project.md`** — read fully before doing anything.
+2. `/scaffold-app` — bootstrap the workspaces (one-time, before any feature).
+3. Land the bootstrap PR; verify all lint / type / test commands run clean against the empty scaffolding.
+4. Move to "A new feature's path" below.
+
 ## A new feature's path
 
 1. `/new-feature <slug>` — the slash command opens a branch and walks through scope.

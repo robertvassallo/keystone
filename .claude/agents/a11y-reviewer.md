@@ -1,7 +1,11 @@
 ---
 name: a11y-reviewer
 description: Reviews UI changes against WCAG 2.2 AA. Checks keyboard reachability, focus order, color contrast (using design tokens), motion preferences, and ARIA correctness. Run before any UI ships.
-tools: Read, Grep, Glob, Bash
+tools:
+  - Read
+  - Grep
+  - Glob
+  - Bash
 model: sonnet
 ---
 

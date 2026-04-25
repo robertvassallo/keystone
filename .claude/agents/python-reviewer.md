@@ -1,7 +1,11 @@
 ---
 name: python-reviewer
 description: Reviews Django / Python changes for typing, layering, ORM discipline, and Django-specific pitfalls. Use before any backend change merges.
-tools: Read, Grep, Glob, Bash
+tools:
+  - Read
+  - Grep
+  - Glob
+  - Bash
 model: sonnet
 ---
 

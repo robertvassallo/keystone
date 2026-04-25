@@ -1,7 +1,11 @@
 ---
 name: semantic-html-auditor
 description: Use proactively before merging UI changes. Audits HTML/JSX for semantic correctness — landmark elements, heading order, valid nesting, button-vs-link usage, and form labeling. Reports issues with file:line references.
-tools: Read, Grep, Glob, Bash
+tools:
+  - Read
+  - Grep
+  - Glob
+  - Bash
 model: sonnet
 ---
 

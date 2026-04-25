@@ -1,7 +1,11 @@
 ---
 name: react-reviewer
 description: Reviews React / Next.js component changes for client/server boundary correctness, hook discipline, render performance, and composition patterns. Use for any new component or significant refactor.
-tools: Read, Grep, Glob, Bash
+tools:
+  - Read
+  - Grep
+  - Glob
+  - Bash
 model: sonnet
 ---
 

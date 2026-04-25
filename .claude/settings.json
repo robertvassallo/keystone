@@ -75,17 +75,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash -c 'f=\"$CLAUDE_TOOL_FILE_PATH\"; case \"$f\" in *.ts|*.tsx|*.js|*.jsx|*.mjs|*.cjs|*.json|*.css|*.scss|*.md) command -v prettier >/dev/null && prettier --write \"$f\" 2>/dev/null || true ;; *.py) command -v ruff >/dev/null && ruff format \"$f\" 2>/dev/null || true ;; esac'"
-          }
-        ]
-      }
-    ],
-    "UserPromptSubmit": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "bash -c 'echo \"Reminder: read CLAUDE.md task router before editing.\" 1>&2'"
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/post-edit-format.sh"
           }
         ]
       }

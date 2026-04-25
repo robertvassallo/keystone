@@ -19,7 +19,9 @@ Versions and rationale: `docs/01_architecture/stack.md`.
 
 | Working on | Read |
 |---|---|
+| **First time on this project** | `docs/04_ai/first-project.md` (the day-1 runbook) |
 | **Anything** | This file → `docs/02_standards/git-workflow.md` → `docs/02_standards/project-structure.md` |
+| API endpoints / contracts | `docs/01_architecture/api-conventions.md` |
 | Components / pages | `docs/02_standards/react.md` + `semantic-html.md` + `accessibility.md` + `tailwind.md` |
 | Styles / tokens | `docs/02_standards/css-sass.md` + `docs/03_ux/design-tokens.md` |
 | Forms | `docs/03_ux/forms.md` + `accessibility.md` + `react.md` |
@@ -76,6 +78,7 @@ Defined in `.claude/agents/`. See `docs/04_ai/agents.md` for usage.
 
 Defined in `.claude/commands/`. See `docs/04_ai/prompting.md`.
 
+- `/scaffold-app` — one-time bootstrap of `apps/web` + `apps/api` + `packages/` (run before the first feature)
 - `/new-feature <slug>` — start a feature: branch + scope + plan + checklist
 
 ## What this template does NOT include yet

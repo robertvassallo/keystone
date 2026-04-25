@@ -1,7 +1,11 @@
 ---
 name: sql-reviewer
 description: Reviews raw SQL, Django ORM queries, and migrations against the SQL standards. Catches SELECT *, missing indexes, N+1 risks, unsafe migrations, and lock-heavy operations. Use before any DB-touching change merges.
-tools: Read, Grep, Glob, Bash
+tools:
+  - Read
+  - Grep
+  - Glob
+  - Bash
 model: sonnet
 ---
 
